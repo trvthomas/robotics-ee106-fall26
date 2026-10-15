@@ -1,0 +1,4 @@
+Invoking command in '/workspace/build/ee106f26': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/ee106f26 -- -j5 -l5
+Invoked command in '/workspace/build/ee106f26' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/ee106f26 -- -j5 -l5
+Invoking command in '/workspace/build/ee106f26': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/ee106f26
+Invoked command in '/workspace/build/ee106f26' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/ee106f26

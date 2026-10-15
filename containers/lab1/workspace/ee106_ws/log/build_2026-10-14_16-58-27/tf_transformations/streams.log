@@ -1,0 +1,33 @@
+[1.452s] Invoking command in '/workspace/ee106_ws/src/tf_transformations': PYTHONPATH=/workspace/ee106_ws/build/tf_transformations/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ee106_ws/install/tf_transformations/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_transformations build --build-base /workspace/ee106_ws/build/tf_transformations/build install --record /workspace/ee106_ws/build/tf_transformations/install.log --install-scripts $base/lib/tf_transformations --single-version-externally-managed install_data
+[1.803s] running egg_info
+[1.804s] creating ../../build/tf_transformations/tf_transformations.egg-info
+[1.822s] writing ../../build/tf_transformations/tf_transformations.egg-info/PKG-INFO
+[1.832s] writing dependency_links to ../../build/tf_transformations/tf_transformations.egg-info/dependency_links.txt
+[1.837s] writing requirements to ../../build/tf_transformations/tf_transformations.egg-info/requires.txt
+[1.841s] writing top-level names to ../../build/tf_transformations/tf_transformations.egg-info/top_level.txt
+[1.913s] writing manifest file '../../build/tf_transformations/tf_transformations.egg-info/SOURCES.txt'
+[1.965s] reading manifest file '../../build/tf_transformations/tf_transformations.egg-info/SOURCES.txt'
+[1.976s] adding license file 'LICENSE'
+[1.983s] writing manifest file '../../build/tf_transformations/tf_transformations.egg-info/SOURCES.txt'
+[1.985s] running build
+[1.991s] running build_py
+[1.994s] creating /workspace/ee106_ws/build/tf_transformations/build
+[1.995s] creating /workspace/ee106_ws/build/tf_transformations/build/lib
+[1.996s] creating /workspace/ee106_ws/build/tf_transformations/build/lib/tf_transformations
+[1.997s] copying tf_transformations/__init__.py -> /workspace/ee106_ws/build/tf_transformations/build/lib/tf_transformations
+[1.998s] running install
+[1.998s] running install_lib
+[2.031s] creating /workspace/ee106_ws/install/tf_transformations/lib/python3.12/site-packages/tf_transformations
+[2.032s] copying /workspace/ee106_ws/build/tf_transformations/build/lib/tf_transformations/__init__.py -> /workspace/ee106_ws/install/tf_transformations/lib/python3.12/site-packages/tf_transformations
+[2.034s] byte-compiling /workspace/ee106_ws/install/tf_transformations/lib/python3.12/site-packages/tf_transformations/__init__.py to __init__.cpython-312.pyc
+[2.054s] running install_data
+[2.058s] creating /workspace/ee106_ws/install/tf_transformations/share/ament_index
+[2.066s] creating /workspace/ee106_ws/install/tf_transformations/share/ament_index/resource_index
+[2.068s] creating /workspace/ee106_ws/install/tf_transformations/share/ament_index/resource_index/packages
+[2.070s] copying resource/tf_transformations -> /workspace/ee106_ws/install/tf_transformations/share/ament_index/resource_index/packages
+[2.072s] copying package.xml -> /workspace/ee106_ws/install/tf_transformations/share/tf_transformations
+[2.074s] running install_egg_info
+[2.099s] Copying ../../build/tf_transformations/tf_transformations.egg-info to /workspace/ee106_ws/install/tf_transformations/lib/python3.12/site-packages/tf_transformations-1.1.1-py3.12.egg-info
+[2.115s] running install_scripts
+[2.232s] writing list of installed files to '/workspace/ee106_ws/build/tf_transformations/install.log'
+[2.293s] Invoked command in '/workspace/ee106_ws/src/tf_transformations' returned '0': PYTHONPATH=/workspace/ee106_ws/build/tf_transformations/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ee106_ws/install/tf_transformations/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_transformations build --build-base /workspace/ee106_ws/build/tf_transformations/build install --record /workspace/ee106_ws/build/tf_transformations/install.log --install-scripts $base/lib/tf_transformations --single-version-externally-managed install_data

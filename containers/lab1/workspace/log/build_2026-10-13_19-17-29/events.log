@@ -1,0 +1,198 @@
+[0.000000] (-) TimerEvent: {}
+[0.000195] (ee106f26) JobQueued: {'identifier': 'ee106f26', 'dependencies': OrderedDict()}
+[0.000387] (ee106f26) JobStarted: {'identifier': 'ee106f26'}
+[0.009847] (ee106f26) JobProgress: {'identifier': 'ee106f26', 'progress': 'cmake'}
+[0.011040] (ee106f26) JobProgress: {'identifier': 'ee106f26', 'progress': 'build'}
+[0.011405] (ee106f26) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/ee106f26', '--', '-j5', '-l5'], 'cwd': '/workspace/build/ee106f26', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'ubuntu', 'SUPERVISOR_GROUP_NAME': 'xfce4', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'df0bb60c6ca1', 'SSH_AGENT_PID': '49', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspace/install/ee106f26/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'DESKTOP_SESSION': 'xfce', 'PANEL_GDK_CORE_DEVICE_EVENTS': '0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/tmp/dbus-72SDfv7Mq3,guid=d16af1890893f563409556516aceca52', 'COLORTERM': 'truecolor', 'container': 'podman', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'WINDOWID': '33571226', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'SESSION_MANAGER': 'local/df0bb60c6ca1:@/tmp/.ICE-unix/20,unix/df0bb60c6ca1:/tmp/.ICE-unix/20', 'XDG_MENU_PREFIX': 'xfce-', 'DISPLAY': ':1.0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'XFCE', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SUPERVISOR_ENABLED': '1', 'SSH_AUTH_SOCK': '/tmp/ssh-RLZLtqDe7czI/agent.48', 'AMENT_PREFIX_PATH': '/workspace/install/ee106f26:/opt/ros/jazzy', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'SUPERVISOR_PROCESS_NAME': 'xfce4', 'PWD': '/workspace/build/ee106f26', 'LC_ALL': 'C.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share', 'PYTHONPATH': '/workspace/install/ee106f26/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'TZ': 'America/Los_Angeles', 'VNC_PW': 'password', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/workspace/install/ee106f26:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.080432] (ee106f26) StdoutLine: {'line': b'[  2%] Built target ee106f26__rosidl_generator_type_description\n'}
+[0.082009] (ee106f26) StdoutLine: {'line': b'[  4%] Built target ee106f26__rs\n'}
+[0.099673] (-) TimerEvent: {}
+[0.104600] (ee106f26) StdoutLine: {'line': b'[  6%] Built target ee106f26__cpp\n'}
+[0.106103] (ee106f26) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_ee106f26\n'}
+[0.110908] (ee106f26) StdoutLine: {'line': b'[ 24%] Built target ee106f26__rosidl_generator_c\n'}
+[0.142273] (ee106f26) StdoutLine: {'line': b'[ 42%] Built target ee106f26__rosidl_typesupport_introspection_c\n'}
+[0.143197] (ee106f26) StdoutLine: {'line': b'[ 42%] Built target ee106f26__rosidl_typesupport_c\n'}
+[0.146523] (ee106f26) StdoutLine: {'line': b'[ 57%] Built target ee106f26__rosidl_typesupport_fastrtps_c\n'}
+[0.148893] (ee106f26) StdoutLine: {'line': b'[ 60%] Built target ee106f26__rosidl_typesupport_fastrtps_cpp\n'}
+[0.174563] (ee106f26) StdoutLine: {'line': b'[ 77%] Built target ee106f26__rosidl_typesupport_cpp\n'}
+[0.175015] (ee106f26) StdoutLine: {'line': b'[ 77%] Built target ee106f26__rosidl_typesupport_introspection_cpp\n'}
+[0.190203] (ee106f26) StdoutLine: {'line': b'[ 77%] Built target ee106f26\n'}
+[0.199750] (-) TimerEvent: {}
+[0.206506] (ee106f26) StdoutLine: {'line': b'[ 80%] Built target ee106f26__py\n'}
+[0.226446] (ee106f26) StdoutLine: {'line': b'running egg_info\n'}
+[0.228564] (ee106f26) StdoutLine: {'line': b'[ 86%] Built target ee106f26__rosidl_generator_py\n'}
+[0.237310] (ee106f26) StdoutLine: {'line': b'writing ee106f26.egg-info/PKG-INFO\n'}
+[0.237977] (ee106f26) StdoutLine: {'line': b'writing dependency_links to ee106f26.egg-info/dependency_links.txt\n'}
+[0.238821] (ee106f26) StdoutLine: {'line': b'writing top-level names to ee106f26.egg-info/top_level.txt\n'}
+[0.255108] (ee106f26) StdoutLine: {'line': b'[100%] Built target ee106f26_s__rosidl_typesupport_introspection_c\n'}
+[0.255732] (ee106f26) StdoutLine: {'line': b'[100%] Built target ee106f26_s__rosidl_typesupport_fastrtps_c\n'}
+[0.256080] (ee106f26) StdoutLine: {'line': b'[100%] Built target ee106f26_s__rosidl_typesupport_c\n'}
+[0.299836] (-) TimerEvent: {}
+[0.317411] (ee106f26) StdoutLine: {'line': b"reading manifest file 'ee106f26.egg-info/SOURCES.txt'\n"}
+[0.318965] (ee106f26) StdoutLine: {'line': b"writing manifest file 'ee106f26.egg-info/SOURCES.txt'\n"}
+[0.336758] (ee106f26) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_ee106f26_egg\n'}
+[0.350634] (ee106f26) CommandEnded: {'returncode': 0}
+[0.352576] (ee106f26) JobProgress: {'identifier': 'ee106f26', 'progress': 'install'}
+[0.358243] (ee106f26) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/build/ee106f26'], 'cwd': '/workspace/build/ee106f26', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'ubuntu', 'SUPERVISOR_GROUP_NAME': 'xfce4', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'df0bb60c6ca1', 'SSH_AGENT_PID': '49', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspace/install/ee106f26/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'DESKTOP_SESSION': 'xfce', 'PANEL_GDK_CORE_DEVICE_EVENTS': '0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/tmp/dbus-72SDfv7Mq3,guid=d16af1890893f563409556516aceca52', 'COLORTERM': 'truecolor', 'container': 'podman', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'WINDOWID': '33571226', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'SESSION_MANAGER': 'local/df0bb60c6ca1:@/tmp/.ICE-unix/20,unix/df0bb60c6ca1:/tmp/.ICE-unix/20', 'XDG_MENU_PREFIX': 'xfce-', 'DISPLAY': ':1.0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'XFCE', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SUPERVISOR_ENABLED': '1', 'SSH_AUTH_SOCK': '/tmp/ssh-RLZLtqDe7czI/agent.48', 'AMENT_PREFIX_PATH': '/workspace/install/ee106f26:/opt/ros/jazzy', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'SUPERVISOR_PROCESS_NAME': 'xfce4', 'PWD': '/workspace/build/ee106f26', 'LC_ALL': 'C.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share', 'PYTHONPATH': '/workspace/install/ee106f26/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'TZ': 'America/Los_Angeles', 'VNC_PW': 'password', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/workspace/install/ee106f26:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.364262] (ee106f26) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.364772] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ament_index/resource_index/rosidl_interfaces/ee106f26\n'}
+[0.365097] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/msg/EE106LabCustom.json\n'}
+[0.365651] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/msg/EE106LabCustomNew.json\n'}
+[0.365973] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26\n'}
+[0.366291] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg\n'}
+[0.366566] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.366874] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/ee106_lab_custom_new.h\n'}
+[0.367245] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail\n'}
+[0.367644] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__type_support.c\n'}
+[0.368144] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__description.c\n'}
+[0.368674] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__type_support.h\n'}
+[0.368930] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__functions.h\n'}
+[0.369239] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__functions.c\n'}
+[0.369622] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__struct.h\n'}
+[0.369922] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__description.c\n'}
+[0.370185] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__type_support.c\n'}
+[0.370419] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__type_support.h\n'}
+[0.370694] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__struct.h\n'}
+[0.370979] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__functions.h\n'}
+[0.371431] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__functions.c\n'}
+[0.371801] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/ee106_lab_custom.h\n'}
+[0.372121] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/environment/library_path.sh\n'}
+[0.372457] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/environment/library_path.dsv\n'}
+[0.372885] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/libee106f26__rosidl_generator_c.so\n'}
+[0.373181] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26\n'}
+[0.373508] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg\n'}
+[0.373998] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail\n'}
+[0.374251] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__rosidl_typesupport_fastrtps_c.h\n'}
+[0.374491] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__rosidl_typesupport_fastrtps_c.h\n'}
+[0.374834] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.375131] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/libee106f26__rosidl_typesupport_fastrtps_c.so\n'}
+[0.375426] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26\n'}
+[0.375735] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg\n'}
+[0.375945] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/ee106_lab_custom.hpp\n'}
+[0.376142] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail\n'}
+[0.376407] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__traits.hpp\n'}
+[0.376658] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__struct.hpp\n'}
+[0.377037] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__builder.hpp\n'}
+[0.377460] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__type_support.hpp\n'}
+[0.377706] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__type_support.hpp\n'}
+[0.377981] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__struct.hpp\n'}
+[0.378453] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__builder.hpp\n'}
+[0.378688] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__traits.hpp\n'}
+[0.378908] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.379153] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/ee106_lab_custom_new.hpp\n'}
+[0.379369] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26\n'}
+[0.379673] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg\n'}
+[0.379954] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.380237] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail\n'}
+[0.380488] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.380679] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.380978] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/dds_fastrtps\n'}
+[0.381294] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/libee106f26__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.381526] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26\n'}
+[0.381777] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg\n'}
+[0.382060] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail\n'}
+[0.382323] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__type_support.c\n'}
+[0.382591] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__rosidl_typesupport_introspection_c.h\n'}
+[0.382877] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__type_support.c\n'}
+[0.383192] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__rosidl_typesupport_introspection_c.h\n'}
+[0.383458] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.383717] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/libee106f26__rosidl_typesupport_introspection_c.so\n'}
+[0.383983] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/libee106f26__rosidl_typesupport_c.so\n'}
+[0.384292] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26\n'}
+[0.384644] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg\n'}
+[0.384995] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail\n'}
+[0.385239] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.385456] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom__type_support.cpp\n'}
+[0.385685] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__type_support.cpp\n'}
+[0.385948] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/include/ee106f26/ee106f26/msg/detail/ee106_lab_custom_new__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.386208] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/libee106f26__rosidl_typesupport_introspection_cpp.so\n'}
+[0.386444] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/libee106f26__rosidl_typesupport_cpp.so\n'}
+[0.386668] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/environment/pythonpath.sh\n'}
+[0.386869] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/environment/pythonpath.dsv\n'}
+[0.387055] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26-0.0.0-py3.12.egg-info\n'}
+[0.387231] (ee106f26) StdoutLine: {'line': b'-- Installing: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[0.387424] (ee106f26) StdoutLine: {'line': b'-- Installing: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[0.387617] (ee106f26) StdoutLine: {'line': b'-- Installing: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[0.387793] (ee106f26) StdoutLine: {'line': b'-- Installing: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[0.387967] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26\n'}
+[0.388140] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/ee106f26_s__rosidl_typesupport_introspection_c.so\n'}
+[0.388391] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/msg\n'}
+[0.388597] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/msg/_ee106_lab_custom_new_s.c\n'}
+[0.388775] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/msg/_ee106_lab_custom_new.py\n'}
+[0.388952] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/msg/_ee106_lab_custom_s.c\n'}
+[0.389141] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/msg/__init__.py\n'}
+[0.389320] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/msg/_ee106_lab_custom.py\n'}
+[0.389520] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/_ee106f26_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.389705] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/ee106f26_s__rosidl_typesupport_c.so\n'}
+[0.389895] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/__init__.py\n'}
+[0.390071] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/_ee106f26_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.390247] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/_ee106f26_s.ep.rosidl_typesupport_c.c\n'}
+[0.390490] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/ee106f26_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.402018] (-) TimerEvent: {}
+[0.405773] (ee106f26) StdoutLine: {'line': b"Listing '/workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26'...\n"}
+[0.406170] (ee106f26) StdoutLine: {'line': b"Listing '/workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/msg'...\n"}
+[0.408756] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/ee106f26_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.409683] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/ee106f26_s__rosidl_typesupport_introspection_c.so\n'}
+[0.410527] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/python3.12/site-packages/ee106f26/ee106f26_s__rosidl_typesupport_c.so\n'}
+[0.411178] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/libee106f26__rosidl_generator_py.so\n'}
+[0.411534] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/rust\n'}
+[0.411834] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/rust/Cargo.toml\n'}
+[0.412182] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/rust/build.rs\n'}
+[0.412465] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/rust/src\n'}
+[0.412745] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/rust/src/msg\n'}
+[0.413035] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/rust/src/msg/rmw.rs\n'}
+[0.413327] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/rust/src/lib.rs\n'}
+[0.413825] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/rust/src/msg.rs\n'}
+[0.414200] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/msg/EE106LabCustom.idl\n'}
+[0.414534] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/msg/EE106LabCustomNew.idl\n'}
+[0.414872] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/msg/EE106LabCustom.msg\n'}
+[0.415206] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/msg/EE106LabCustomNew.msg\n'}
+[0.415549] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/launch\n'}
+[0.415834] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/launch/turtlebot_spawn.launch.py\n'}
+[0.416243] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/launch/turtlebot.launch.py\n'}
+[0.416472] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/launch/file.launch.py\n'}
+[0.416775] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ament_index/resource_index/package_run_dependencies/ee106f26\n'}
+[0.417368] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ament_index/resource_index/parent_prefix_path/ee106f26\n'}
+[0.417672] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/environment/ament_prefix_path.sh\n'}
+[0.418112] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/environment/ament_prefix_path.dsv\n'}
+[0.418628] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/environment/path.sh\n'}
+[0.419134] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/environment/path.dsv\n'}
+[0.419666] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/local_setup.bash\n'}
+[0.420035] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/local_setup.sh\n'}
+[0.420463] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/local_setup.zsh\n'}
+[0.420863] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/local_setup.dsv\n'}
+[0.421366] (ee106f26) StdoutLine: {'line': b'-- Installing: /workspace/install/ee106f26/share/ee106f26/package.dsv\n'}
+[0.421678] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ament_index/resource_index/packages/ee106f26\n'}
+[0.422297] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/export_ee106f26__rosidl_generator_cExport.cmake\n'}
+[0.422665] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/export_ee106f26__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.423132] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/export_ee106f26__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.423454] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/export_ee106f26__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.423891] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/export_ee106f26__rosidl_generator_cppExport.cmake\n'}
+[0.424251] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/export_ee106f26__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.424562] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/export_ee106f26__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.424852] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.425182] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.425569] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26__rosidl_typesupport_cExport.cmake\n'}
+[0.425894] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.426503] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.426954] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.427248] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26__rosidl_typesupport_cppExport.cmake\n'}
+[0.427518] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.427771] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/export_ee106f26__rosidl_generator_pyExport.cmake\n'}
+[0.428215] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/export_ee106f26__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.428659] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/rosidl_cmake-extras.cmake\n'}
+[0.429053] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.429322] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.429637] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.429873] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.430235] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.430667] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.430920] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[0.431315] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26Config.cmake\n'}
+[0.431558] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/cmake/ee106f26Config-version.cmake\n'}
+[0.431990] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/share/ee106f26/package.xml\n'}
+[0.432295] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/ee106f26/publisher.py\n'}
+[0.432606] (ee106f26) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/ee106f26/lib/ee106f26/subscriber.py\n'}
+[0.432996] (ee106f26) CommandEnded: {'returncode': 0}
+[0.463017] (ee106f26) JobEnded: {'identifier': 'ee106f26', 'rc': 0}
+[0.464066] (-) EventReactorShutdown: {}

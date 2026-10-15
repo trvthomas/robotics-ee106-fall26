@@ -1,0 +1,227 @@
+[0.108s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.108s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=5, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff978a4260>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff97a60b60>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff97a60b60>>, mixin_verb=('build',))
+[0.149s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.150s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.150s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.150s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.151s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.151s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.151s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspace'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extension 'ignore'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extension 'ignore_ament_install'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extensions ['colcon_pkg']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extension 'colcon_pkg'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extensions ['colcon_meta']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extension 'colcon_meta'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extensions ['ros']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extension 'ros'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extensions ['cmake', 'python']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extension 'cmake'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extension 'python'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extensions ['python_setup_py']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws) by extension 'python_setup_py'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/build) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/build) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/build) ignored
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/install) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/install) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/install) ignored
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/log) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/log) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/log) ignored
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extension 'ignore'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extension 'ignore_ament_install'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extensions ['colcon_pkg']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extension 'colcon_pkg'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extensions ['colcon_meta']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extension 'colcon_meta'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extensions ['ros']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extension 'ros'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extensions ['cmake', 'python']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extension 'cmake'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extension 'python'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extensions ['python_setup_py']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src) by extension 'python_setup_py'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/ee106f26) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/ee106f26) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/ee106f26) by extension 'ignore_ament_install'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/ee106f26) by extensions ['colcon_pkg']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/ee106f26) by extension 'colcon_pkg'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/ee106f26) by extensions ['colcon_meta']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/ee106f26) by extension 'colcon_meta'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/ee106f26) by extensions ['ros']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/ee106f26) by extension 'ros'
+[0.205s] DEBUG:colcon.colcon_core.package_identification:Package 'ee106_ws/src/ee106f26' with type 'ros.ament_cmake' and name 'ee106f26'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/tf_transformations) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/tf_transformations) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/tf_transformations) by extension 'ignore_ament_install'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/tf_transformations) by extensions ['colcon_pkg']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/tf_transformations) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/tf_transformations) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/tf_transformations) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/tf_transformations) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(ee106_ws/src/tf_transformations) by extension 'ros'
+[0.212s] DEBUG:colcon.colcon_core.package_identification:Package 'ee106_ws/src/tf_transformations' with type 'ros.ament_python' and name 'tf_transformations'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.216s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.216s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.216s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.216s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.241s] Level 5:colcon.colcon_core.verb:set package 'ee106f26' build argument 'cmake_args' from command line to 'None'
+[0.241s] Level 5:colcon.colcon_core.verb:set package 'ee106f26' build argument 'cmake_target' from command line to 'None'
+[0.241s] Level 5:colcon.colcon_core.verb:set package 'ee106f26' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'ee106f26' build argument 'cmake_clean_cache' from command line to 'False'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'ee106f26' build argument 'cmake_clean_first' from command line to 'False'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'ee106f26' build argument 'cmake_force_configure' from command line to 'False'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'ee106f26' build argument 'ament_cmake_args' from command line to 'None'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'ee106f26' build argument 'catkin_cmake_args' from command line to 'None'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'ee106f26' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.242s] DEBUG:colcon.colcon_core.verb:Building package 'ee106f26' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/build/ee106f26', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/install/ee106f26', 'merge_install': False, 'path': '/workspace/ee106_ws/src/ee106f26', 'symlink_install': False, 'test_result_base': None}
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'tf_transformations' build argument 'cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'tf_transformations' build argument 'cmake_target' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'tf_transformations' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'tf_transformations' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'tf_transformations' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'tf_transformations' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'tf_transformations' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'tf_transformations' build argument 'catkin_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'tf_transformations' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.244s] DEBUG:colcon.colcon_core.verb:Building package 'tf_transformations' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/build/tf_transformations', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/install/tf_transformations', 'merge_install': False, 'path': '/workspace/ee106_ws/src/tf_transformations', 'symlink_install': False, 'test_result_base': None}
+[0.245s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.246s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.247s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspace/ee106_ws/src/ee106f26' with build type 'ament_cmake'
+[0.247s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspace/ee106_ws/src/ee106f26'
+[0.250s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.250s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.251s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.267s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspace/ee106_ws/src/tf_transformations' with build type 'ament_python'
+[0.268s] Level 1:colcon.colcon_core.shell:create_environment_hook('tf_transformations', 'ament_prefix_path')
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/tf_transformations/share/tf_transformations/hook/ament_prefix_path.ps1'
+[0.273s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/install/tf_transformations/share/tf_transformations/hook/ament_prefix_path.dsv'
+[0.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/tf_transformations/share/tf_transformations/hook/ament_prefix_path.sh'
+[0.277s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.277s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.321s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/build/ee106f26': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/install/tf_transformations:/workspace/ee106_ws/install/tf_transformations:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/ee106f26 -- -j5 -l5
+[0.648s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspace/ee106_ws/src/tf_transformations'
+[0.649s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.649s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.334s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: bdist_dumb, install_scripts, saveopts, bdist, compile_catalog, sdist, init_catalog, build_py, build_clib, install_egg_info, build, install_lib, develop, egg_info, rotate, build_ext, symlink_data, install_headers, bdist_wheel, alias, bdist_egg, dist_info, test, build_scripts, update_catalog, upload, check, extract_messages, register, bdist_rpm, clean, upload_docs, install, editable_wheel, setopt, easy_install, install_data
+[1.343s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/ee106_ws/src/tf_transformations': PYTHONPATH=/workspace/build/tf_transformations/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/tf_transformations/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/tf_transformations build --build-base /workspace/build/tf_transformations/build install --record /workspace/build/tf_transformations/install.log --install-scripts $base/lib/tf_transformations --single-version-externally-managed install_data
+[1.983s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/ee106_ws/src/tf_transformations' returned '0': PYTHONPATH=/workspace/build/tf_transformations/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/tf_transformations/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/tf_transformations build --build-base /workspace/build/tf_transformations/build install --record /workspace/build/tf_transformations/install.log --install-scripts $base/lib/tf_transformations --single-version-externally-managed install_data
+[1.986s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/tf_transformations' for CMake module files
+[1.987s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/tf_transformations' for CMake config files
+[1.991s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/tf_transformations/lib'
+[1.992s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/tf_transformations/bin'
+[1.992s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/tf_transformations/lib/pkgconfig/tf_transformations.pc'
+[1.993s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/tf_transformations/lib/python3.12/site-packages'
+[1.994s] Level 1:colcon.colcon_core.shell:create_environment_hook('tf_transformations', 'pythonpath')
+[1.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/tf_transformations/share/tf_transformations/hook/pythonpath.ps1'
+[1.996s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/install/tf_transformations/share/tf_transformations/hook/pythonpath.dsv'
+[1.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/tf_transformations/share/tf_transformations/hook/pythonpath.sh'
+[1.999s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/tf_transformations/bin'
+[1.999s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tf_transformations)
+[2.001s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/tf_transformations/share/tf_transformations/package.ps1'
+[2.006s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/install/tf_transformations/share/tf_transformations/package.dsv'
+[2.012s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/tf_transformations/share/tf_transformations/package.sh'
+[2.015s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/tf_transformations/share/tf_transformations/package.bash'
+[2.017s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/tf_transformations/share/tf_transformations/package.zsh'
+[2.024s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/install/tf_transformations/share/colcon-core/packages/tf_transformations)
+[8.277s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/build/ee106f26' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/install/tf_transformations:/workspace/ee106_ws/install/tf_transformations:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/ee106f26 -- -j5 -l5
+[8.317s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/build/ee106f26': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/install/tf_transformations:/workspace/ee106_ws/install/tf_transformations:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/ee106f26
+[8.572s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ee106f26)
+[8.572s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26' for CMake module files
+[8.573s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/build/ee106f26' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/install/tf_transformations:/workspace/ee106_ws/install/tf_transformations:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/ee106f26
+[8.576s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26' for CMake config files
+[8.585s] Level 1:colcon.colcon_core.shell:create_environment_hook('ee106f26', 'cmake_prefix_path')
+[8.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/cmake_prefix_path.ps1'
+[8.589s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/install/ee106f26/share/ee106f26/hook/cmake_prefix_path.dsv'
+[8.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/cmake_prefix_path.sh'
+[8.594s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/lib'
+[8.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('ee106f26', 'ld_library_path_lib')
+[8.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/ld_library_path_lib.ps1'
+[8.605s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/install/ee106f26/share/ee106f26/hook/ld_library_path_lib.dsv'
+[8.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/ld_library_path_lib.sh'
+[8.620s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/bin'
+[8.621s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/lib/pkgconfig/ee106f26.pc'
+[8.622s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/lib/python3.12/site-packages'
+[8.624s] Level 1:colcon.colcon_core.shell:create_environment_hook('ee106f26', 'pythonpath')
+[8.624s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/pythonpath.ps1'
+[8.626s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/install/ee106f26/share/ee106f26/hook/pythonpath.dsv'
+[8.628s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/pythonpath.sh'
+[8.630s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/bin'
+[8.631s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/ee106f26/share/ee106f26/package.ps1'
+[8.633s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/install/ee106f26/share/ee106f26/package.dsv'
+[8.636s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/ee106f26/share/ee106f26/package.sh'
+[8.638s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/ee106f26/share/ee106f26/package.bash'
+[8.639s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/ee106f26/share/ee106f26/package.zsh'
+[8.649s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/install/ee106f26/share/colcon-core/packages/ee106f26)
+[8.653s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ee106f26)
+[8.654s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26' for CMake module files
+[8.661s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26' for CMake config files
+[8.668s] Level 1:colcon.colcon_core.shell:create_environment_hook('ee106f26', 'cmake_prefix_path')
+[8.671s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/cmake_prefix_path.ps1'
+[8.681s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/install/ee106f26/share/ee106f26/hook/cmake_prefix_path.dsv'
+[8.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/cmake_prefix_path.sh'
+[8.687s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/lib'
+[8.688s] Level 1:colcon.colcon_core.shell:create_environment_hook('ee106f26', 'ld_library_path_lib')
+[8.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/ld_library_path_lib.ps1'
+[8.691s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/install/ee106f26/share/ee106f26/hook/ld_library_path_lib.dsv'
+[8.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/ld_library_path_lib.sh'
+[8.696s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/bin'
+[8.697s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/lib/pkgconfig/ee106f26.pc'
+[8.698s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/lib/python3.12/site-packages'
+[8.699s] Level 1:colcon.colcon_core.shell:create_environment_hook('ee106f26', 'pythonpath')
+[8.700s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/pythonpath.ps1'
+[8.707s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/install/ee106f26/share/ee106f26/hook/pythonpath.dsv'
+[8.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/install/ee106f26/share/ee106f26/hook/pythonpath.sh'
+[8.715s] Level 1:colcon.colcon_core.environment:checking '/workspace/install/ee106f26/bin'
+[8.715s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/ee106f26/share/ee106f26/package.ps1'
+[8.719s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/install/ee106f26/share/ee106f26/package.dsv'
+[8.720s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/ee106f26/share/ee106f26/package.sh'
+[8.722s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/ee106f26/share/ee106f26/package.bash'
+[8.726s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/install/ee106f26/share/ee106f26/package.zsh'
+[8.727s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/install/ee106f26/share/colcon-core/packages/ee106f26)
+[8.728s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.728s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.728s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[8.728s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.755s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[8.756s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.756s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.756s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.793s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.794s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/install/local_setup.ps1'
+[8.806s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/install/_local_setup_util_ps1.py'
+[8.812s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/install/setup.ps1'
+[8.827s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/install/local_setup.sh'
+[8.829s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/install/_local_setup_util_sh.py'
+[8.833s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/install/setup.sh'
+[8.842s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/install/local_setup.bash'
+[8.852s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/install/setup.bash'
+[8.879s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/install/local_setup.zsh'
+[8.894s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/install/setup.zsh'

@@ -1,0 +1,20 @@
+[1.075s] Invoking command in '/workspace/ee106_ws/src/tf_transformations': PYTHONPATH=/workspace/build/tf_transformations/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/tf_transformations/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/tf_transformations build --build-base /workspace/build/tf_transformations/build install --record /workspace/build/tf_transformations/install.log --install-scripts $base/lib/tf_transformations --single-version-externally-managed install_data
+[1.407s] running egg_info
+[1.423s] writing ../../../build/tf_transformations/tf_transformations.egg-info/PKG-INFO
+[1.424s] writing dependency_links to ../../../build/tf_transformations/tf_transformations.egg-info/dependency_links.txt
+[1.429s] writing requirements to ../../../build/tf_transformations/tf_transformations.egg-info/requires.txt
+[1.433s] writing top-level names to ../../../build/tf_transformations/tf_transformations.egg-info/top_level.txt
+[1.553s] reading manifest file '../../../build/tf_transformations/tf_transformations.egg-info/SOURCES.txt'
+[1.561s] adding license file 'LICENSE'
+[1.562s] writing manifest file '../../../build/tf_transformations/tf_transformations.egg-info/SOURCES.txt'
+[1.563s] running build
+[1.564s] running build_py
+[1.566s] running install
+[1.573s] running install_lib
+[1.589s] running install_data
+[1.590s] running install_egg_info
+[1.606s] removing '/workspace/install/tf_transformations/lib/python3.12/site-packages/tf_transformations-1.1.1-py3.12.egg-info' (and everything under it)
+[1.609s] Copying ../../../build/tf_transformations/tf_transformations.egg-info to /workspace/install/tf_transformations/lib/python3.12/site-packages/tf_transformations-1.1.1-py3.12.egg-info
+[1.618s] running install_scripts
+[1.674s] writing list of installed files to '/workspace/build/tf_transformations/install.log'
+[1.715s] Invoked command in '/workspace/ee106_ws/src/tf_transformations' returned '0': PYTHONPATH=/workspace/build/tf_transformations/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/tf_transformations/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/tf_transformations build --build-base /workspace/build/tf_transformations/build install --record /workspace/build/tf_transformations/install.log --install-scripts $base/lib/tf_transformations --single-version-externally-managed install_data
