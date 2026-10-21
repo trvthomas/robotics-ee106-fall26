@@ -1,5 +1,0 @@
-[31mCMake Error at cmake_install.cmake:390 (file):
-  file INSTALL cannot find "/workspace/ee106_ws/src/ee106f26/launch": No such
-  file or directory.
-
-[0m

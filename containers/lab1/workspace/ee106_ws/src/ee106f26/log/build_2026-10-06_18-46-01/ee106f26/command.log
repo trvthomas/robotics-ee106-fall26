@@ -1,2 +1,0 @@
-Invoking command in '/workspace/ee106_ws/src/ee106f26/build/ee106f26': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspace/ee106_ws/src/ee106f26 -DCMAKE_INSTALL_PREFIX=/workspace/ee106_ws/src/ee106f26/install/ee106f26
-Invoked command in '/workspace/ee106_ws/src/ee106f26/build/ee106f26' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspace/ee106_ws/src/ee106f26 -DCMAKE_INSTALL_PREFIX=/workspace/ee106_ws/src/ee106f26/install/ee106f26

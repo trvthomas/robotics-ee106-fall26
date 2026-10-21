@@ -1,7 +1,0 @@
-[0.010s] Invoking command in '/workspace/ee106_ws/src/ee106f26/build/ee106f26': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspace/ee106_ws/src/ee106f26 -DCMAKE_INSTALL_PREFIX=/workspace/ee106_ws/src/ee106f26/install/ee106f26
-[0.019s] [31mCMake Error at CMakeLists.txt:8 (rosidl_generate_interfaces):
-[0.019s]   Unknown CMake command "rosidl_generate_interfaces".
-[0.020s] 
-[0.020s] [0m
-[0.020s] -- Configuring incomplete, errors occurred!
-[0.021s] Invoked command in '/workspace/ee106_ws/src/ee106f26/build/ee106f26' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspace/ee106_ws/src/ee106f26 -DCMAKE_INSTALL_PREFIX=/workspace/ee106_ws/src/ee106f26/install/ee106f26
