@@ -32,7 +32,7 @@ p = \begin{bmatrix}
 \end{bmatrix}_{3x1}
 ```
 
-It's a 3x1 translation vector: line segment *starting at the origin of a reference frame **{A}*** and *pointing towards a specific point in another frame **{B}***.\
+It's a 3x1 translation vector: line segment *starting at the origin of a reference frame **{A}*** and *pointing towards a specific point in another frame **{B}***.
 
 #### Rotations
 
@@ -69,7 +69,7 @@ R_{AB} = \begin{bmatrix}
 
 #### Fixed and Body Rotations
 
-To rotate a frame about some other axis we multiply the **rotation matrix** of the **current frame (new)** * the rotation matrix of the **other frame (old)**. We multiply on the left or right repending on whether we want to do a rotation with respect to the new or old.
+To rotate a frame about some other axis we multiply the **rotation matrix** of the **current frame (new)** * the rotation matrix of the **other frame (old)**. We multiply on the left or right depending on whether we want to do a rotation with respect to the new or old.
 
 ##### Fixed Frame (left)
 
@@ -150,16 +150,6 @@ M_{BA} = T^{-1}_{AB} = \begin{bmatrix}
 > [!WARNING]
 > It's a common mistake to just do the transpose for a transformation matrix, that is WRONG!!
 
-### Pending, more terms?
-
-#### Why are frames important?
-
-Mainly to get the correct coordinates. Sensors are located in different positions with respect to the **base frame**. To get accurate mathematical conversions, mapping, and movement, we need to take the points gathered by the sensors and translate and rotate them so they can be processed accordingly.
-
-#### How many frames can a robot have?
-
-As many as needed. They are represented and organized in a hierarchical tree (TF tree). Every rigid link and sensor has its own frame (ex. base_link, shoulder, elbow, wheel_left, wheel_right, lidar, camera)
-
 ### Velocities :runner:
 
 Position and orientation change over time. In robotics, a rigid body can move, slide, and spin. These set of movements are packed up into a 6-dimensional object called a **twist**.
@@ -176,7 +166,7 @@ Position and orientation change over time. In robotics, a rigid body can move, s
 ```
 
 Represent the **speed and axis** of rotation.\
-Magnitude ($`||\omega||`$) represents the **spin speed**.
+Magnitude ($`\| \omega \|`$) represents the **spin speed**.
 
 #### Linear Velocity
 *How fast a point is **translating***
@@ -195,15 +185,15 @@ Represent the **speed and direction** of a straight-line movement.
 A matrix whose transpose is equal to its negative
 
 ```math
+[\omega] = -[\omega]^T
+```
+
+```math
 [\omega] = \begin{bmatrix}
     0 & -\omega_z & \omega_y\\
     \omega_z & 0 & -\omega_x\\
     -\omega_y & \omega_x & 0
 \end{bmatrix}
-```
-
-```math
-[\omega] = -[\omega]^T
 ```
 
 #### Rate of change
@@ -233,6 +223,67 @@ V = \begin{bmatrix}
 \end{bmatrix}
 ```
 
+#### Adjoint transformation matrix
+
+```math
+[Ad_{T}] = \begin{bmatrix}
+    R & 0\\
+    [p]R & R
+\end{bmatrix}
+```
+
+```math
+[p] = \begin{bmatrix}
+    0 & -p_z & p_y\\
+    p_z & 0 & -p_x\\
+    -p_y & p_x & 0
+\end{bmatrix} \begin{bmatrix}
+    \omega\\
+    v
+\end{bmatrix}
+```
+
+Used to change the reference frame of a twist.
+
+#### Body and spatial twists
+
+To understand **body** and **spatial** twists, we imagine the following scenario with 2 frames:
+- We have a CD with a stick glued in the middle. In the outer edge of the CD there's a coin. We start rotating the stick so the whole thing can rotate with it.
+- Frame {s} is the stick
+- Frame {b} is the coin at the CD's outer edge
+
+```math
+V_b = \begin{bmatrix}
+    \omega_b\\
+    v_b
+\end{bmatrix}
+```
+
+```math
+V_s = \begin{bmatrix}
+    \omega_s\\
+    v_s
+\end{bmatrix}
+```
+
+| Component | Body twist {b}  | Spatial twist {s} |
+| --- | --- | --- |
+| Axis of measurement  | $`x_b, y_b, z_b`$  | $`x_s, y_s, z_s`$ |
+| What does $`v`$ represent?  | Velocity of {b}. How fast is the coin moving? It has a tangential velocity component, thus the coin may have both angular and linear velocities $`\omega, v \neq 0`$. | Velocity of {s}, which in this case is 0 because we are rotating the stick only. The stick is not moving in any other direction. |
+
+##### Using with adjoint transformations
+
+The $`[Ad_{T}]`$ transformation matrix can be used to change the reference frame of a twist. In other words, we want to find the body twist {b} of the coin at that moment knowing the spatial twist {s} from the stick, or viceversa.
+
+```math
+V_b = [Ad_{T_{bs}}]V_s
+```
+
+```math
+V_s = [Ad_{T_{sb}}]V_b
+```
+
+
 ## Wheeled Robot Kinematics
 
 ### Omni-directional robots
@@ -242,7 +293,7 @@ V = \begin{bmatrix}
 ### Non-holonomic robots
 
 - Cannot generate velocity in a certain direction
-    - ex. can move forward and backward. I order to move "sideways" it needs to turn x degrees and then move forward
+    - ex. can move forward and backward. In order to move "sideways" it needs to turn first ($`\omega`$) and then move forward ($`v`$)
 
 Since these robots work in **2D space**, we have a special case of 3x3 transformation matrix, used **only in pen and paper math,** when coding, for simplicity, we want to use the 4x4 matrix.
 
@@ -306,31 +357,32 @@ V = \begin{bmatrix}
 \end{bmatrix}
 ```
 
-$`u_1`$ = rate of change of steering angle
+$`u_1`$ = rate of change of steering angle\\
 $`u_2`$ = angular velocity of the wheel
 
 Multiplying out each row from the matrix we can get the individual components:
 
-**Heading/Yaw rate ($`\dot{\psi}`$**)
+**Heading/Yaw rate ($`\dot{\phi}`$)**
 
 ```math
-\omega = \dot{\psi} = u_2
+\omega = \dot{\phi} = u_2
 ```
 
-**Inertial x velocity ($`\dot{x}`$**)
+**Inertial x velocity ($`\dot{x}`$)**
 
 ```math
 \dot{x} = v\cos(\phi)
 ```
 
-**Inertial y velocity ($`\dot{y}`$**)
+**Inertial y velocity ($`\dot{y}`$)**
 
 ```math
 \dot{y} = v\sin(\phi)
 ```
 
-**Where did the linear velocity ($`v`$?) came from?**\\
-From the matrix we simplified the linear velocity ($`v`$?):
+**Where did the linear velocity ($`v`$?) came from?**
+
+From the matrix we simplified the linear velocity ($`v`$):
 
 ```math
 v = ru_1
@@ -360,31 +412,32 @@ v = ru_1
 \end{bmatrix}
 ```
 
-$`u_L`$ = angular velocity of left wheel
+$`u_L`$ = angular velocity of left wheel\\
 $`u_R`$ = angular velocity of right wheel
 
 Multiplying out each row from the matrix we can get the individual components:
 
-**Angular velocity ($`\omega`$**)
+**Angular velocity ($`\omega`$)**
 
 ```math
-\omega = \frac{r}{2d}(u_R-u_L)
+\omega = \dot{\phi} = \frac{r}{2d}(u_R-u_L)
 ```
 
-**Inertial x velocity ($`\dot{x}`$**)
+**Inertial x velocity ($`\dot{x}`$)**
 
 ```math
 \dot{x} = v\cos(\phi)
 ```
 
-**Inertial y velocity ($`\dot{y}`$**)
+**Inertial y velocity ($`\dot{y}`$)**
 
 ```math
 \dot{y} = v\sin(\phi)
 ```
 
-**Where did the linear velocity ($`v`$?) came from?**\\
-From the matrix we simplified the linear velocity ($`v`$?):
+**Where did the linear velocity ($`v`$?) came from?**
+
+From the matrix we simplified the linear velocity ($`v`$):
 
 ```math
 v = \frac{r}{2}(u_L+u_R)
@@ -416,7 +469,7 @@ v = \frac{r}{2}(u_L+u_R)
 \end{bmatrix}
 ```
 
-$`v`$ = linear forward speed
+$`v`$ = linear forward speed\\
 $`\omega`$ = angular speed of the steering angle
 
 <!-- ### Degrees of Freedom (DoF)
@@ -426,3 +479,13 @@ Minimum number of constraints needed to complete a configuration
 Holonomic vs no holonomic
 differential drive kinematics
 -->
+
+### Misc Q&A :question:
+
+#### Why are frames important?
+
+Mainly to get the correct coordinates. Sensors are located in different positions with respect to the **base frame**. To get accurate mathematical conversions, mapping, and movement, we need to take the points gathered by the sensors and translate and rotate them so they can be processed accordingly.
+
+#### How many frames can a robot have?
+
+As many as needed. They are represented and organized in a hierarchical tree (TF tree). Every rigid link and sensor has its own frame (ex. base_link, shoulder, elbow, wheel_left, wheel_right, lidar, camera)
