@@ -62,24 +62,30 @@ def move_forward(self, desiredX, desiredY, step):
 
     # Activate the controller(self, Kp, Kd, reference_point)
     controller = Controller(1.5, 0.7, desiredX)
-    #controllerAngle = Controller(2.0, 0.5, 0)
+    """ Method 1 using angle controller
+    controllerAngle = Controller(2.0, 0.5, 0)
+    correctAngleCount = 0
+    """
 
-    #correctAngleCount = 0
-
+    """ Method 2 using one axis and one controller: """
     measured = self.pose.x if step == 1 or step == 5 else self.pose.y
 
-    #while (sqrt(((desiredX - self.pose.x) ** 2) + ((desiredY - self.pose.y) ** 2))) > 0.08:
+    """ Method 1 using Euclidean distance
+    while (sqrt(((desiredX - self.pose.x) ** 2) + ((desiredY - self.pose.y) ** 2))) > 0.08:
+    """
+
+    """ Method 2 using one axis and one controller: """
     while (abs(desiredX - measured)) > 0.05:
         if step == 1 or step == 5:
             correctedLinearVel = controller.update(self.pose.x)
         else:
             correctedLinearVel = controller.update(self.pose.y)
 
-        """
+        """ Method 1 using angle controller
         correctAngleCount = correctAngleCount + 1
         correctedAngularVel = 0.0
 
-        if correctAngleCount > 5:
+        if correctAngleCount > 100:
             desired_theta = atan2((desiredY - self.pose.y), (desiredX - self.pose.x))
             angle_error = atan2(sin(desired_theta - self.pose.theta), cos(desired_theta - self.pose.theta))
             correctedAngularVel = controllerAngle.update(angle_error) * 14
@@ -91,6 +97,7 @@ def move_forward(self, desiredX, desiredY, step):
         if step == 5 or step == 7:
             correctedLinearVel = correctedLinearVel * -1
 
+        """ Method 2 using one axis and one controller: """
         measured = self.pose.x if step == 1 or step == 5 else self.pose.y
 
         vel.twist.linear.x = correctedLinearVel
