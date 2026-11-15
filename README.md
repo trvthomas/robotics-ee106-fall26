@@ -74,7 +74,9 @@ To rotate a frame about some other axis we multiply the **rotation matrix** of t
 ##### Fixed Frame (left)
 
 ```math
-R = rot(x, 90)\\
+R = rot(x, 90)
+```
+```math
 R_{AB} = R*R_{AB}
 ```
 > [!TIP]
@@ -84,7 +86,9 @@ R_{AB} = R*R_{AB}
 ##### Body Frame (right)
 
 ```math
-R = rot(x, 90)\\
+R = rot(x, 90)
+```
+```math
 R_{AB} = R_{AB}*R
 ```
 > [!TIP]
@@ -113,10 +117,8 @@ It's a 4x4 matrix that combines both the **position vector** and the **orientati
 
 > [!TIP]
 >**:baby: In kids terms:** We have a point $`p_a = \begin{bmatrix}
-    x\\
-    y\\
-    z
-\end{bmatrix}`$. That vector shows how to get to that point if we have the origin at frame {a}. **What if we want to express how to get to that point but if we start in another frame {s} origin?** We use:
+x & y & z
+\end{bmatrix}^T`$. That vector shows how to get to that point if we have the origin at frame {a}. **What if we want to express how to get to that point but if we start in another frame {s} origin?** We use:
 
 ```math
 \begin{bmatrix}
@@ -134,11 +136,15 @@ It's a 4x4 matrix that combines both the **position vector** and the **orientati
 There are 2 main useful properties:
 
 ##### Chain rule
+
 $`T_{AD} = T_{A\cancel{B}} * T_{\cancel{B}\cancel{C}} * T_{\cancel{C}D}`$\
+
 We can cancel out the inner adjacent frames :grin:
 
 ##### Inverse transformation
+
 $`R_{BA} = R^{-1}_{AB} = R^{T}_{AB}`$\
+
 We can take the inverse/transpose of a rotation matrix to get the opposite frame configurations, for transformations it works differently:
 
 ```math
@@ -286,11 +292,11 @@ V_s = [Ad_{T_{sb}}]V_b
 
 ## Wheeled Robot Kinematics
 
-### Omni-directional robots
+### Omni-directional robots :ghost:
 
 - Can move in any direction in 2D space (forward, backward, sideways), don't need to "turn" to move in a new direction
 
-### Non-holonomic robots
+### Non-holonomic robots :car:
 
 - Cannot generate velocity in a certain direction
     - ex. can move forward and backward. In order to move "sideways" it needs to turn first ($`\omega`$) and then move forward ($`v`$)
@@ -330,9 +336,7 @@ V = \begin{bmatrix}
 \end{bmatrix}
 ```
 
-#### Sub-types
-
-##### Unicycle
+#### Unicycle
 - Imagine a wheel
 - Configuration: $`q=\begin{bmatrix}
     \phi & x & y
@@ -357,7 +361,7 @@ V = \begin{bmatrix}
 \end{bmatrix}
 ```
 
-$`u_1`$ = rate of change of steering angle\\
+$`u_1`$ = rate of change of steering angle\
 $`u_2`$ = angular velocity of the wheel
 
 Multiplying out each row from the matrix we can get the individual components:
@@ -388,7 +392,7 @@ From the matrix we simplified the linear velocity ($`v`$):
 v = ru_1
 ```
 
-##### Differential drive
+#### Differential drive
 - Configuration: $`q=\begin{bmatrix}
     \phi & x & y
 \end{bmatrix}^T`$
@@ -412,7 +416,7 @@ v = ru_1
 \end{bmatrix}
 ```
 
-$`u_L`$ = angular velocity of left wheel\\
+$`u_L`$ = angular velocity of left wheel\
 $`u_R`$ = angular velocity of right wheel
 
 Multiplying out each row from the matrix we can get the individual components:
@@ -443,7 +447,7 @@ From the matrix we simplified the linear velocity ($`v`$):
 v = \frac{r}{2}(u_L+u_R)
 ```
 
-##### Car-like
+#### Car-like
 - Configuration: $`q=\begin{bmatrix}
     \phi & x & y & \theta
 \end{bmatrix}^T`$
@@ -469,8 +473,170 @@ v = \frac{r}{2}(u_L+u_R)
 \end{bmatrix}
 ```
 
-$`v`$ = linear forward speed\\
+$`v`$ = linear forward speed\
 $`\omega`$ = angular speed of the steering angle
+
+
+## Motion control
+
+Refers to the process of determining the appropiate control inputs to achieve a desired motion behavior while ensuring the robot remains **stable**.
+
+Applicable **control types** depend on the robot type (ex. ground or underwater), actuation (ex. # control inputs), dynamics and constraints (ex. non/linear or non/holonomic), and taks (ex. mobile vs haptic).
+
+The most fundamental **control categories** include <ins>motion (pos, vel, acc)</ins>, force, hybric motion-force, impedance control.
+
+Quick comparison between categories and types:
+
+| Control **categories** | Control **types** |
+| --- | --- |
+| What physical quantity are we regulating? | How do we mathematically formulate the commands given the robot's constraints? |
+| *Fundamental domains*: motion, force, impedance | *Algorithmic implementations*: Trajectory tracking, path tracking, smooth vs discontinuous, etc. |
+| Driven by nature of the robot's interaction with the environment | Driven by robot's kinematic morphology, actuation limits, and degree of non-holonomic constraints |
+
+
+### Open Loop
+
+- Referred to as **feedforward** term
+- Encodes the desired robot motion behavior (ex. forward, left, right, up, down)
+
+### Closed Loop
+
+- Referred to as **feedback** term
+- Corrects the feedforward control input deviations
+
+### State Space Representation
+
+- *State* is a vector $`x = \begin{bmatrix}
+    x_1 & x_2 & \cdots & x_n
+\end{bmatrix}^T`$
+- State includes configuration: position ($`q`$), velocity ($`\dot{q}`$)
+
+```math
+q = \begin{bmatrix}
+    q_1 & q_2 & \cdots & q_n
+\end{bmatrix}^T
+```
+
+```math
+x = \begin{bmatrix}
+    q\\
+    \dot{q}
+\end{bmatrix}
+```
+
+```math
+\underbrace{\dot{x}}_\text{rate of change of state}=f(\underbrace{x}_\text{current state}, \underbrace{u}_\text{input applied})
+```
+
+#### Example: spring-mass system
+
+**Given:** $`m\ddot{q}(t)+kq(t)=u(t)`$
+
+**Step 1: identify**\
+2nd order differential equation
+
+**Step 2: organize equation**\
+```math
+\ddot{q}(t)=\frac{u(t)-kq(t)}{m}
+```
+
+**Step 3: set state vector**\
+```math
+x = \begin{bmatrix}
+    x_1 &x_2
+\end{bmatrix}^T
+=
+\begin{bmatrix}
+    q & \dot{q}
+\end{bmatrix}^T
+```
+
+**Step 4: find coupled equations**\
+| $`x_1=q`$ | $`\dot{x_1}=\dot{q}=x_2`$ |
+| --- | --- |
+| $`x_2=\dot{q}`$ | $`\dot{x_2}=\ddot{q}=\frac{u-k\overbrace{q}^{x_1}}{m}=\frac{u-kx_1}{m}`$ |
+
+**Step 5: write as matrix**\
+```math
+\begin{bmatrix}
+    \dot{x_1}\\
+    \dot{x_2}
+\end{bmatrix} = \begin{bmatrix}
+    x_2\\
+    \frac{u-kx_1}{m}
+\end{bmatrix}
+```
+
+**Step 6: rewrite to satisfy linear system**\
+To satisfy the linear system, we need to find a way to rewrite the matrox in the following form:
+```math
+\dot{x}=\underbrace{Ax}_\text{matrix A that multiplies state x}+\underbrace{Bu}_\text{vector B that multiplies control input u}
+```
+
+```math
+\begin{bmatrix}
+    \dot{x_1}\\
+    \dot{x_2}
+\end{bmatrix} = \begin{bmatrix}
+    0 & x_2\\
+    -\frac{k}{m} & 0
+\end{bmatrix}
+\begin{bmatrix}
+    x_1\\
+    x_2
+\end{bmatrix}
++ \begin{bmatrix}
+    0\\
+    \frac{1}{m}
+\end{bmatrix} u
+```
+
+Not always is possible to rewrite, if we cannot, then it's considered a **non-linear system.**
+
+Some tips to identify a non-linear system:
+- contains a trig function (sin, cos, tan, etc.)
+- x contains powers (ex. $`x_1^2`$ or $`x_2^3`$ )
+
+#### Example: damped pendulum
+
+**Given:** $`\ddot{q}+\frac{c}{ml^2}\dot{q}+\frac{g}{l}\sin{q}=0`$
+
+**Step 1: identify**\
+2nd order differential equation
+
+**Step 2: organize equation**\
+```math
+\ddot{q}=-\frac{c}{ml^2}\dot{q}-\frac{g}{l}\sin{q}
+```
+
+**Step 3 & 4: set state vector and find coupled equations**\
+```math
+x = \begin{bmatrix}
+    x_1 &x_2
+\end{bmatrix}^T
+=
+\begin{bmatrix}
+    q & \dot{q}
+\end{bmatrix}^T
+```
+
+| $`x_1=q`$ | $`\dot{x_1}=\dot{q}=x_2`$ |
+| --- | --- |
+| $`x_2=\dot{q}`$ | $`\dot{x_2}=-\frac{c}{ml^2}x_2-\frac{g}{l}\sin{x_1}`$ |
+
+**Step 5: write as matrix**\
+```math
+\begin{bmatrix}
+    \dot{x_1}\\
+    \dot{x_2}
+\end{bmatrix} = \begin{bmatrix}
+    x_2\\
+    -\frac{c}{ml^2}x_2-\frac{g}{l}\sin{x_1}
+\end{bmatrix}
+```
+
+
+
 
 <!-- ### Degrees of Freedom (DoF)
 Minimum number of constraints needed to complete a configuration
@@ -480,12 +646,12 @@ Holonomic vs no holonomic
 differential drive kinematics
 -->
 
-### Misc Q&A :question:
+## Misc Q&A :question:
 
-#### Why are frames important?
+### Why are frames important?
 
 Mainly to get the correct coordinates. Sensors are located in different positions with respect to the **base frame**. To get accurate mathematical conversions, mapping, and movement, we need to take the points gathered by the sensors and translate and rotate them so they can be processed accordingly.
 
-#### How many frames can a robot have?
+### How many frames can a robot have?
 
 As many as needed. They are represented and organized in a hierarchical tree (TF tree). Every rigid link and sensor has its own frame (ex. base_link, shoulder, elbow, wheel_left, wheel_right, lidar, camera)
