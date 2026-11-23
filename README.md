@@ -494,17 +494,17 @@ Quick comparison between categories and types:
 | Driven by nature of the robot's interaction with the environment | Driven by robot's kinematic morphology, actuation limits, and degree of non-holonomic constraints |
 
 
-### Open Loop
+### Open Loop :curly_loop:
 
 - Referred to as **feedforward** term
 - Encodes the desired robot motion behavior (ex. forward, left, right, up, down)
 
-### Closed Loop
+### Closed Loop :loop:
 
 - Referred to as **feedback** term
 - Corrects the feedforward control input deviations
 
-### State Space Representation
+### State Space Representation :package:
 
 - *State* is a vector $`x = \begin{bmatrix}
     x_1 & x_2 & \cdots & x_n
@@ -535,12 +535,12 @@ x = \begin{bmatrix}
 **Step 1: identify**\
 2nd order differential equation
 
-**Step 2: organize equation**\
+**Step 2: organize equation**
 ```math
 \ddot{q}(t)=\frac{u(t)-kq(t)}{m}
 ```
 
-**Step 3: set state vector**\
+**Step 3: set state vector**
 ```math
 x = \begin{bmatrix}
     x_1 &x_2
@@ -551,12 +551,12 @@ x = \begin{bmatrix}
 \end{bmatrix}^T
 ```
 
-**Step 4: find coupled equations**\
+**Step 4: find coupled equations**
 | $`x_1=q`$ | $`\dot{x_1}=\dot{q}=x_2`$ |
 | --- | --- |
 | $`x_2=\dot{q}`$ | $`\dot{x_2}=\ddot{q}=\frac{u-k\overbrace{q}^{x_1}}{m}=\frac{u-kx_1}{m}`$ |
 
-**Step 5: write as matrix**\
+**Step 5: write as matrix**
 ```math
 \begin{bmatrix}
     \dot{x_1}\\
@@ -604,15 +604,15 @@ Some tips to identify a non-linear system:
 **Step 1: identify**\
 2nd order differential equation
 
-**Step 2: organize equation**\
+**Step 2: organize equation**
 ```math
 \ddot{q}=-\frac{c}{ml^2}\dot{q}-\frac{g}{l}\sin{q}
 ```
 
-**Step 3 & 4: set state vector and find coupled equations**\
+**Step 3 & 4: set state vector and find coupled equations**
 ```math
 x = \begin{bmatrix}
-    x_1 &x_2
+    x_1 & x_2
 \end{bmatrix}^T
 =
 \begin{bmatrix}
@@ -624,7 +624,7 @@ x = \begin{bmatrix}
 | --- | --- |
 | $`x_2=\dot{q}`$ | $`\dot{x_2}=-\frac{c}{ml^2}x_2-\frac{g}{l}\sin{x_1}`$ |
 
-**Step 5: write as matrix**\
+**Step 5: write as matrix**
 ```math
 \begin{bmatrix}
     \dot{x_1}\\
@@ -635,6 +635,139 @@ x = \begin{bmatrix}
 \end{bmatrix}
 ```
 
+**non-linear**
+
+#### Example: 4-dimensional state vectors
+
+**Given:**
+```math
+(M+m)\ddot{x}+mL\ddot{\theta}\cos{\theta}-mL\dot{\theta}^2\sin{\theta}=u(t)
+```
+
+```math
+mL\ddot{x}\cos{\theta}+mL^2\ddot{\theta}-mgL\sin{\theta}=0
+```
+
+**Step 1: identify**\
+Two 2nd order differential equations
+
+**Step 2: organize equation**\
+Need to solve for 1 equation, replace, and repeat until getting 2 equations: one for $`\ddot{theta}`$ and one for $`\ddot{x}`$
+
+```math
+\ddot{x}=\frac{u(t)-mg\sin{\theta}\cos{\theta}+mL\dot{\theta}^2\sin{\theta}}{M+m\sin^2{\theta}}
+```
+
+```math
+\ddot{\theta}=\frac{Mg\sin{\theta}+mg\sin{\theta}-u(t)\cos{\theta}+mL\dot{\theta}^2\sin{\theta}\cos{\theta}}{L(M+m\sin^2{\theta})}
+```
+
+**Step 3 & 4: set state vector and find coupled equations**\
+```math
+x = \begin{bmatrix}
+    x_1 & x_2 & x_3 & x_4 
+\end{bmatrix}^T
+=
+\begin{bmatrix}
+    x & \dot{x} & \theta & \dot{\theta}
+\end{bmatrix}^T
+```
+
+| $`x_1=x`$ | $`\dot{x_1}=\dot{x}=x_2`$ |
+| --- | --- |
+| $`x_2=\dot{x}`$ | $`\dot{x_2}=\frac{u-mg\sin{x_3}\cos{x_3}+mLx_4^2\sin{x_3}}{M+m\sin^2{x_3}}`$ |
+
+| $`x_3=\theta`$ | $`\dot{x_3}=\dot{x=\theta}=x_4`$ |
+| --- | --- |
+| $`x_4=\dot{\theta}`$ | $`\dot{x_4}=\frac{Mg\sin{x_3}+mg\sin{x_3}-u\cos{x_3}+mLx_4^2\sin{x_3}\cos{x_3}}{L(M+m\sin^2{x_3})}`$ |
+
+**Step 5: write as matrix**\
+```math
+\begin{bmatrix}
+    \dot{x_1}\\
+    \dot{x_2}
+    \dot{x_3}
+    \dot{x_4}
+\end{bmatrix} = \begin{bmatrix}
+    x_2\\
+    \cdots\\
+    x_4\\
+    \cdots
+\end{bmatrix}
+```
+
+**non-linear**
+
+
+### Heuristics :thinking:
+
+**Heuristics** refer to the process of estimating a distance from an initial point to a final point using either of two methods:
+
+#### Euclidean distance ($`L_2`$ norm)
+
+Estimates the distance as a straight line from the current point $`x y`$ to the final/end point $`x_G y_G`$.
+
+```math
+h=\sqrt{(x-x_G)^2+(y-y_G)^2}
+```
+
+#### Manhattan distance ($`L_1`$ norm)
+
+Estimates the distance using a square grid (vertical or horizontal only, no diagonal lines) from the current point $`x y`$ to the final/end point $`x_G y_G`$.
+
+```math
+h=|(x-x_G)^2|+|(y-y_G)^2|
+```
+
+
+### A* search algorithm :mag:
+
+It's important to have an **adjacency graph** or **occupancy grid** to perform the A* algorithm. Build a table with all the nodes and their corresponding heuristic ($`h(n)`$) values. Build the table and start checking the nodes, adding them to the open list, checking the neighbor nodes/cells, until getting to the end node.
+
+$`f(n)=g(n)+h(n)`$ where $`g(n)`$ is the past cost, $`h(n)`$ is the heuristic value, and $`f(n)`$ is the total weight of that node
+
+| | Start node | Node 1 | Node 2 | $`\cdots`$ | Goal node |
+| --- | --- | --- | --- | --- | --- |
+| $`g(n)`$ | 0 | ~ | ~ | $`\cdots`$ | x |
+| $`h(n)`$ | x | ~ | ~ | $`\cdots`$ | 0 |
+| $`f(n)`$ | x | ~ | ~ | $`\cdots`$ | x |
+| parent | - | ~ | ~ | $`\cdots`$ | ~ |
+
+**open list**\
+Node 2(e.g. weight: 2), Node 1(e.g. weight: 3) $`\cdots`$
+
+**closed list**
+Start node $`\cdots`$
+
+When reaching the goal, the A* algorithm will return the **optimal path**.
+
+#### Grids
+
+The A* algorithm works the same for an occupancy grid. However, there are 2 types of performing the search:
+
+##### 4-connected graphs
+
+Each node is connected to 4 neighbors: Top, bottom, left, and right.
+
+```math
+\begin{matrix}
+   & \circ &  \\
+  \circ & \bullet & \circ \\
+   & \circ &
+ \end{matrix}
+```
+
+##### 8-connected graphs
+
+Each node is connected to 8 neighbors: Top, bottom, left, and right, diagonal.
+
+```math
+\begin{matrix}
+  \circ & \circ & \circ \\
+  \circ & \bullet & \circ \\
+  \circ & \circ & \circ
+ \end{matrix}
+```
 
 
 
